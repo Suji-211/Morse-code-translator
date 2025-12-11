@@ -6,6 +6,17 @@
     <title>Morse-Translator</title>
 </head>
 <body>
-    <script type = "module" src = "app.js"></script>
+    <h1>Morse Code Translator</h1>
+    <input id = "englishInput" placeholder="Enter a word (Hello)">
+    <button onclick="runTranslate()">Translate</button>
+    <p><strong>Output: </strong> <span id = "output"></span></p>
+    <script src = "translator.js"></script>
+    <script>
+        function runTranslate(){
+            const input = document.getElementById("englishInput").value;
+            const result = translateSentence(input);
+            document.getElementById("output").textContent = result;
+        }
+    </script>
 </body>
 </html>
