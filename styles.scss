@@ -1,0 +1,70 @@
+$bg: #0f172a;
+$panel: #1e293b;
+$text: #f1f5f9;
+$button: #38bdf8;
+
+body.app{
+    background: $bg;
+    font-family: "Poppins", sans-serif;
+    color: $text;
+    display:flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.translator{
+    background: $panel;
+    padding: 30px;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.translator__title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.translator__input-group{
+    display: flex;
+    gap: 10px;
+}
+
+.translator__input{
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.translator__button{
+    padding: 12px 18px;
+    background: $button;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    &:hover{
+        background: darken($button,10%);
+    }
+}
+
+.translator__output-group{
+    margin-top: 20px;
+    font-size: 18px;
+
+}
+
+.translator__output{
+    background: rgba($color: black, $alpha:1.0);
+    margin-top: 10px;
+    padding: 15px;
+    min-height: 60px;
+    border-radius: 8px;
+    font-size: 18px;
+    word-break: break-word;
+}

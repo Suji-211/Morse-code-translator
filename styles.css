@@ -1,0 +1,64 @@
+body.app {
+  background: #0f172a;
+  font-family: "Poppins", sans-serif;
+  color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.translator {
+  background: #1e293b;
+  padding: 30px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.translator__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.translator__input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.translator__input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.translator__button {
+  padding: 12px 18px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.translator__button:hover {
+  background: rgb(8.5970873786, 171.9417475728, 244.4029126214);
+}
+
+.translator__output-group {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.translator__output {
+  background: black;
+  margin-top: 10px;
+  padding: 15px;
+  min-height: 60px;
+  border-radius: 8px;
+  font-size: 18px;
+  word-break: break-word;
+}/*# sourceMappingURL=styles.css.map */
