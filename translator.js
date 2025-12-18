@@ -89,6 +89,16 @@ function autoTranslate(input) {
 }
  //window.getMorseForLetter = getMorseForLetter;
 // window.translateWord = translateWord;
- window.translateSentence = translateSentence;
- window.translateMorseSentence= translateMorseSentence;
- window.autoTranslate = autoTranslate;
+ //window.translateSentence = translateSentence;
+ //window.translateMorseSentence= translateMorseSentence;
+ //window.autoTranslate = autoTranslate;
+
+ module.exports = {
+    getMorseForLetter, 
+    translateWord, 
+    translateSentence, 
+    translatemorseWord, 
+    translateMorseSentence, 
+    detectLanguage, 
+    autoTranslate
+ };
