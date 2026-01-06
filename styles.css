@@ -48,7 +48,13 @@ body.app {
   background: rgb(8.5970873786, 171.9417475728, 244.4029126214);
 }
 
-.translator__output-group {
+.translator__error {
+  color: #f87171;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.translator__output-label {
   margin-top: 20px;
   font-size: 18px;
 }
