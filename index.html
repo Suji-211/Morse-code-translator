@@ -10,20 +10,13 @@
     <div class = "translator">
     <h1 class = "translator__title">Morse Code Translator</h1>
     <div class = "translator__input-group">
-    <input id = "englishInput" class = "translator__input" placeholder="Enter a word or Morse ">
-    <button class = "translator__button" onclick="runTranslate()">Translate</button>
+    <input id = "input" class = "translator__input" placeholder="Enter a word or Morse ">
+    <button id = "translate" class = "translator__button">Translate</button>
     </div>
+    <p id = "error" class = " translator__error"></p>
     <p class = "translator__output-label"><strong>Output: </strong></p>
     <div id = "output" class = "translator__output"></div>
     </div>
-    <script src = "translator.js"></script>
-    <script>
-        function runTranslate(){
-            const input = document.getElementById("englishInput").value;
-            const result = autoTranslate(input);
-            document.getElementById("output").textContent = result;
-        }
-        
-    </script>
+    <script type = "module" src = "src/app.js"></script>
 </body>
 </html>

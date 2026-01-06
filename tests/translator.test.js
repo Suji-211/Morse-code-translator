@@ -1,22 +1,40 @@
-const { getMorseForLetter, translateWord, translateSentence, translatemorseWord, translateMorseSentence, detectLanguage, autoTranslate } = require( "../translator");
-describe ("Morse translator initial tests", () => {
-    test("getMorseForLetter returns correct Morse for A", () => {
-        expect(getMorseForLetter("A")) .toBe(".-");
-    });
-    test("translateWord converts HELLO to correct Morse", () => {
-        expect(translateWord("HELLO")) .toBe(".... . .-.. .-.. ---");
-    });
-    test("translateSentence converts multiple words", () => {
-        expect(translateSentence("HELLO WORLD")) .toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -..");
-    });
-    test("translateMorseSentence converts multiple words", () => {
-        expect(translateMorseSentence(".... . .-.. .-.. --- / .-- --- .-. .-.. -..")).toBe("HELLO WORLD");
-    });
-    test("autoTranslate converts morse to english", () => {
-        expect(autoTranslate("... --- ...")).toBe("SOS");
-    });
-    test("autoTranslate converts morse to english", () => {
-        expect(autoTranslate("SOS")).toBe("... --- ...");
-    });
+import{
+    translateEnglishToMorse,translateMorseToEnglish,autoTranslate
+} from "../src/translator.js";
 
-})
+describe("Morse Translator", () => {
+  test("English → Morse", () => {
+    expect(translateEnglishToMorse("SOS"))
+      .toBe("... --- ...");
+  });
+
+  test("Multiple words English → Morse", () => {
+    expect(translateEnglishToMorse("HELLO WORLD"))
+      .toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -..");
+  });
+
+  test("Morse → English", () => {
+    expect(translateMorseToEnglish("... --- ..."))
+      .toBe("SOS");
+  });
+
+  test("Auto translate English", () => {
+    expect(autoTranslate("SOS"))
+      .toBe("... --- ...");
+  });
+
+  test("Auto translate Morse", () => {
+    expect(autoTranslate("... --- ..."))
+      .toBe("SOS");
+  });
+
+  test("Throws error for invalid English", () => {
+    expect(() => autoTranslate("HELLO!"))
+      .toThrow("untranslatable");
+  });
+
+  test("Throws error for invalid Morse", () => {
+    expect(() => autoTranslate("... --- ....-"))
+      .toThrow("invalid Morse");
+  });
+});
